@@ -79,7 +79,7 @@ If it outputs `WARNING: No swap limit support` near the bottom, this is the case
 but we recommended doing it if you will be hosting for others, and to prevent OOM errors.
 
 To do so, open `/etc/default/grub` as a root user, and find the line starting with `GRUB_CMDLINE_LINUX_DEFAULT`. Make
-sure the line includes `swapaccount=1`.
+sure the line includes `swapaccount=1`. Values should be space-seperated not comma-seperated.
 
 After doing that, simply run `sudo update-grub` followed by `sudo reboot` to restart the server and have swap enabled.
 Below is an example of what the line should look like, _do not copy this line verbatium, it often has additional
